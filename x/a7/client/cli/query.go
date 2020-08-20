@@ -30,6 +30,7 @@ func GetQueryCmd(queryRoute string, cdc *codec.Codec) *cobra.Command {
 	a7QueryCmd.AddCommand(
 		flags.GetCommands(
       // this line is used by starport scaffolding
+			GetCmdListUser(queryRoute, cdc),
 		)...,
 	)
 

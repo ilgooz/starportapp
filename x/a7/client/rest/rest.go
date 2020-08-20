@@ -9,4 +9,6 @@ import (
 // RegisterRoutes registers a7-related REST handlers to a router
 func RegisterRoutes(cliCtx context.CLIContext, r *mux.Router) {
   // this line is used by starport scaffolding
+	r.HandleFunc("/a7/user", listUserHandler(cliCtx, "a7")).Methods("GET")
+	r.HandleFunc("/a7/user", createUserHandler(cliCtx)).Methods("POST")
 }
